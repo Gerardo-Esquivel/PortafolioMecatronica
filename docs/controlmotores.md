@@ -67,8 +67,9 @@ void loop() {
 
 
 ## Video
-(video motor1)
-
+<video width="400" controls>
+  <source src="../imgs/motor1.mp4" type="video/mp4">
+</video>
 
 ## Práctica 2: Control de potencia de un motor DC con ESP32 y PWM
 **Equipo:** Gerardo Esquivel de Luna, José Ismael Guerrero Román.
@@ -150,9 +151,10 @@ void loop() {
 }
 ```
 
-
 ## Video:
-(video motor2)
+<video width="400" controls>
+  <source src="../imgs/motor2.mp4" type="video/mp4">
+</video>
 
 
 
