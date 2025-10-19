@@ -54,7 +54,10 @@ void loop() {
   }
 }
 ```
-(video ESP32Btn)
+<video width="400" controls>
+  <source src="../imgs/ESP32Btn.mp4" type="video/mp4">
+</video>
+
 
 ## Control solo por ESP 32 (intervalos de parpadeo):
 Encender y apagar mediante código, en intervalos.
@@ -72,7 +75,10 @@ void loop() {
   delay(2000);              // Espera 2 segundos
 }
 ```
-(video ESP32)
+<video width="400" controls>
+  <source src="../imgs/ESP32.mp4" type="video/mp4">
+</video>
+
 
 ## Control por Bluetooth:
 Control del led escribiendo en una consola conectada por Bluetooth
@@ -103,6 +109,8 @@ void loop() {
   delay(1000);
 }
 ```
-(video ESP32Bth)
+<video width="400" controls>
+  <source src="../imgs/ESP32Bth.mp4" type="video/mp4">
+</video>
 
 
