@@ -31,8 +31,8 @@ No fue necesario usar ningún software, solo una calculadora básica para sacar 
 - Fuente de poder de 5 V o 9 V.
 
 
-(video)
+(video intermitente)
 
 
-(imagen)
+(imagen 555)
 
