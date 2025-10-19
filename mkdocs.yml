@@ -44,5 +44,6 @@ nav:
   - Trabajos semanales:
     - Circuito con Osciloscopio: osciloscopio.md
     - Control de Motores DC con ESP32 y Puente H: controlmotores.md
+    - Control de LED con ESP32: ledesp32.md
   - Proyectos: proyectos.md
   - Equipo de trabajo: presentacion.md 
