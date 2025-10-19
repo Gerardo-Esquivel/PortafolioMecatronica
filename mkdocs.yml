@@ -43,5 +43,6 @@ nav:
   - Conóceme: aboutme.md
   - Trabajos semanales:
     - Circuito con Osciloscopio: osciloscopio.md
+    - Control de Motores DC con ESP32 y Puente H: controlmotores.md
   - Proyectos: proyectos.md
   - Equipo de trabajo: presentacion.md 
