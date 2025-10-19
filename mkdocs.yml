@@ -42,6 +42,6 @@ nav:
   - Inicio: index.md
   - Conóceme: aboutme.md
   - Trabajos semanales:
-    - Osciloscopio: osciloscopio.md
+    - Circuito con Osciloscopio: osciloscopio.md
   - Proyectos: proyectos.md
   - Equipo de trabajo: presentacion.md 
