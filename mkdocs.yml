@@ -40,6 +40,6 @@ extra_css:
   
 nav:
   - Inicio: index.md
-  - Sobre mi: aboutme.md
-  - Ingenieria Mecatrónica: trabajos.md
+  - Conóceme: aboutme.md
+  - Tranajos semanales: trabajos.md
   - Equipo de trabajo: presentacion.md 
