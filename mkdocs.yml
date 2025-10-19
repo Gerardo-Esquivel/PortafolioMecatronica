@@ -41,6 +41,6 @@ extra_css:
 nav:
   - Inicio: index.md
   - Conóceme: aboutme.md
-  - Tranajos semanales: trabajos.md
+  - Trabajos semanales: trabajos.md
   - Proyectos: proyectos.md
   - Equipo de trabajo: presentacion.md 
