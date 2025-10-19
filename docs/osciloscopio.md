@@ -30,8 +30,8 @@ No fue necesario usar ningún software, solo una calculadora básica para sacar 
 - Protoboard y cables de conexión.
 - Fuente de poder de 5 V o 9 V.
 ---
-<video controls width="100%">
-    <source src="imgs/intermitente.mp4" type="video/mp4">
+<video controls width="400">
+    <source src="../imgs/intermitente.mp4" type="video/mp4">
 </video>
 ---
 (imagen 555)
