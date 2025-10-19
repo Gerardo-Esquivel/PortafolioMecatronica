@@ -34,5 +34,5 @@ No fue necesario usar ningún software, solo una calculadora básica para sacar 
     <source src="../imgs/intermitente.mp4" type="video/mp4">
 </video>
 ---
-(imagen 555)
+<img src="../imgs/555.png" width="400" alt="Diagrama del circuito">
 ---
