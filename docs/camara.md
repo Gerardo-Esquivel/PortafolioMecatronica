@@ -44,6 +44,9 @@ cv2.destroyAllWindows()
 Aplica un filtro de color para transformar el video capturado a escala de grises, reduciendo la complejidad de la imagen a una sola dimensión de intensidad. Este es un paso fundamental en muchos algoritmos de visión por computadora para la detección de bordes y el procesamiento eficiente. 
 
 
+<img src="../imgs/camara/bn.jpeg" width="400" alt="coche">
+
+
 ```cpp
 import cv2 
  
@@ -76,6 +79,9 @@ cv2.destroyAllWindows()
 
 
 Al convertir de BGR (formato nativo de OpenCV) a RGB (formato estándar de visualización), el orden de los canales se invierte. Esta reordenación produce un predominio de tonos azules y cianes en la visualización, ya que los valores asignados al canal Azul se mueven al canal Rojo (índice 2) y viceversa. 
+
+
+<img src="../imgs/camara/filtroazul.jpeg" width="400" alt="coche">
 
 
 ```cpp
@@ -142,6 +148,9 @@ cv2.destroyAllWindows()
 Para obtener una dominante de tonos rosados o magenta, se utiliza la combinación de los canales Rojo y Azul mientras se anula completamente el canal Verde. En la matriz BGR de OpenCV, el canal Verde se encuentra en el índice 1. 
 
 
+<img src="../imgs/camara/filtrorosa.jpeg" width="400" alt="coche">
+
+
 ```cpp
 import cv2 
 import numpy as np 
@@ -181,6 +190,9 @@ Esta sección demuestra la capacidad de dibujar figuras geométricas (líneas, r
 Este script dibuja una línea diagonal de esquina a esquina y un rectángulo delimitador que enmarca el video. 
 
 
+<img src="../imgs/camara/rayaycuadrado.jpeg" width="400" alt="coche">
+
+
 ```cpp
 import cv2 
  
@@ -213,6 +225,9 @@ cv2.destroyAllWindows()
 
 
 Este ejercicio combina varias figuras geométricas y introduce el concepto de animación usando variables dinámicas (cx, cy). La actualización constante de estas variables simula el movimiento del círculo a través del frame, lo cual representa un concepto clave para visualizar el centro de un objeto en movimiento en aplicaciones de tracking. 
+
+
+<img src="../imgs/camara/contextoyfiguras.jpeg" width="400" alt="coche">
 
 
 ```cpp
@@ -261,6 +276,9 @@ cv2.destroyAllWindows()
 Este ejercicio demuestra el concepto de Región de Interés (ROI) a través de la indexación de matrices de NumPy. Se aplica un filtro de color diferente a cada cuadrante del frame al anular selectivamente un canal de color en una porción específica de la matriz de la imagen. 
 
 
+<img src="../imgs/camara/mascara.jpeg" width="400" alt="coche">
+
+
 ```cpp
 import cv2 
 import numpy as np 
@@ -298,6 +316,14 @@ cv2.destroyAllWindows()
 
 
 Estos códigos aplican la segmentación por color HSV y el cálculo de contornos para localizar el objeto más grande en el frame y calcular su desviación respecto al centro. Esto simula la lógica de un sistema de seguimiento que podría ser utilizado para controlar un sistema robótico. 
+
+
+<video width="400" controls>
+  <source src="../imgs/camara/videoseguimiento.mp4" type="video/mp4">
+</video>
+<video width="400" controls>
+  <source src="../imgs/camara/videoseguimiento2.mp4" type="video/mp4">
+</video>
 
 
 ## Deteccion y tracking por color
