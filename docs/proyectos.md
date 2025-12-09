@@ -30,7 +30,7 @@ El proyecto consistió en el diseño y construcción de un carro robot teledirig
 - MDF / IMPRESION 3D: Materiales utilizados para la estructura (chasis, cubiertas y pala frontal).
 
 
-<img src="../imgs/coche/coche3.png" width="400" alt="spinner">
+<img src="../imgs/coche/coche3.jpeg" width="400" alt="spinner">
 
 
   ## Procedimiento - Elaboración
@@ -44,8 +44,8 @@ El desarrollo del proyecto se llevó a cabo mediante una aproximación colaborat
 - Mecanica: Esta área fue responsable del diseño físico (chasis de cuatro ruedas) y el ensamblaje, incluyendo la creación e integración de la pala frontal diseñada para la interacción eficiente con la pelota.
 
 
-<img src="../imgs/coche/coche2.png" width="400" alt="spinner">
-<img src="../imgs/coche/coche5.png" width="400" alt="spinner">
+<img src="../imgs/coche/coche2.jpeg" width="400" alt="spinner">
+<img src="../imgs/coche/coche5.jpeg" width="400" alt="spinner">
 
 
   ## Codigo de programación (Arduino)
