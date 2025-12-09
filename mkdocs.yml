@@ -46,7 +46,7 @@ nav:
     - Control de Motores DC con ESP32 y Puente H: controlmotores.md
     - Control de LED con ESP32: ledesp32.md
     - Control de Servos: servos.md
-    - Programa con cámara: camara.md
+    - Visión por computadora: camara.md
   - Proyectos (Coche y Plataforma):
     - Proyecto coche: proyectos.md
     - Proyecto plataforma: plataforma.md
