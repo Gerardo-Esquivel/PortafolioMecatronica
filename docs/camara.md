@@ -4,6 +4,12 @@
 Esta sección documenta diversas prácticas de Visión por Computadora realizadas con Python y la librería OpenCV (cv2). Los ejercicios demuestran la capacidad de adquirir streams de video en tiempo real, aplicar filtros de procesamiento de imágenes, superponer gráficos y, finalmente, implementar un sistema avanzado de seguimiento de objetos por color con capacidad de control externo mediante Bluetooth.
 
 
+## Entornos
+
+
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
+
+
 ## 1. Captura básica y visualización
 
 
@@ -498,3 +504,14 @@ sock.close() # Cierra la conexión Bluetooth
 
 
 El desarrollo de este portafolio subraya la capacidad esencial de OpenCV y Python para transformar una fuente de video cruda en datos procesables, abarcando desde la manipulación básica de píxeles (filtros y conversión de color BGR a HSV) hasta la implementación de complejos algoritmos de Visión por Computadora (CV) para el seguimiento de objetos (tracking). La práctica más significativa fue la exitosa integración de la CV con la comunicación inalámbrica (Bluetooth), demostrando cómo calcular el error direccional (ErrorX, ErrorY) de un objeto de interés y convertir esa desviación en comandos de control (IZQUIERDA, DERECHA). Este proceso establece un puente funcional entre el mundo digital (visión) y el mundo físico (robótica), siendo el principio rector de los sistemas de automatización y el control robótico basado en visión.
+
+
+## Imagenes 
+
+
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
+<img src="../imgs/camara/entornos.png" width="400" alt="coche">
