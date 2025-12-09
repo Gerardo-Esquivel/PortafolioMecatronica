@@ -1,29 +1,40 @@
 # Proyecto Final: Plataforma - Balance de Pelota.
----
+
+
 Este proyecto se centró en el diseño e implementación de un sistema de control de posición en tiempo real. El objetivo fue construir una plataforma dinámica capaz de mantener una pelota centrada sobre su superficie, contrarrestando activamente la fuerza de gravedad mediante la inclinación de la base. El sistema emplea una arquitectura avanzada que combina visión por computadora (Python) para la detección de errores y el microcontrolador ESP32 para la ejecución precisa del movimiento a través de servomotores.
----
+
+
 ## Marco Teórico.
----
+
+
 El proyecto se sustenta en tres pilares tecnológicos: la visión por computadora para la detección de errores, el protocolo de comunicación inalámbrica y la teoría de control.
----
+
+
 ## 1. Visión por Computadora y Detección de Posición:
----
+
+
 Se utilizó Python junto con bibliotecas especializadas (como OpenCV) para capturar el stream de video de la cámara
 - Procesamiento: El código identifica el color o las características de la pelota, calcula sus coordenadas (x, y) en la imagen y determina la posición central de la plataforma.
 - Error: El error de posición se calcula como la diferencia entre la posición actual de la pelota y el punto central deseado, siendo la entrada principal para el algoritmo de control.
----
+
+
 ## 2. Protocolo de Comunicación Bluetooth:
----
+
+
 Para transmitir los datos del error calculados por la PC (Python) al hardware (ESP32), se empleó la comunicación Bluetooth. Esta elección garantizó una conexión inalámbrica de baja latencia necesaria para las tareas de control en tiempo real, enviando los valores del error "x" y "y" de manera continua.
----
+
+
 ## 3. Control de Inclinación (Servomotores):
----
+
+
 Los servomotores fueron elegidos como actuadores por su capacidad de posicionamiento angular preciso.
 - Función: La ESP32 recibe el error y lo traduce en ángulos de inclinación , para los dos servomotores, que controlan los ejes X y Y de la plataforma.
 - Control (PID): La relación entre el error de posición y los ángulos de los servomotores generalmente se maneja mediante un algoritmo de control Proporcional-Integral-Derivativo (PID), aunque la implementación básica puede usar solo control Proporcional. El objetivo es que, si la pelota se mueve en la dirección X positiva, la plataforma se incline en la dirección X negativa para corregir el movimiento.
----
+
+
 ## Materiales.
----
+
+
 - Microcontrolador ESP32 DevKit V
 - Computadora Host
 - Cámara Webcam USB
@@ -31,26 +42,30 @@ Los servomotores fueron elegidos como actuadores por su capacidad de posicionami
 - Base de equilibrio (acrílico, madera) y mecanismos de acoplamiento para los servos.
 - Módulo de Bluetooth Integrado (en ESP32)
 - Software Python y Arduino IDE (para el código del ESP32).
----
+
+
   ## Procedimiento - Elaboracion.
----
+
+
   ## Conexión y montaje.
----
+
+
 La plataforma mecánica se construyó sobre dos servomotores, permitiendo el movimiento independiente en dos ejes de inclinación, y su cableado se realizó directamente a pines PWM digitales específicos del ESP32 para el control de ángulo. El flujo de datos inicia con la cámara capturando la imagen, la cual es procesada por Python para calcular el error de posición; Python luego transmite los valores $x, y$ vía Bluetooth a la ESP32, donde el código de Arduino los recibe e inmediatamente los utiliza para calcular y establecer el ángulo de corrección de los servomotores.
----
+
 
 <img src="../imgs/plataforma/piezas.jpg" width="400" alt="coche">
 <img src="../imgs/plataforma/articulaciones.jpg" width="400" alt="arti">
 <img src="../imgs/plataforma/elaboracion.jpg" width="400" alt="coche">
----
+
+
 ## Códigos:
----
+
 
 <img src="../imgs/plataforma/codigo1.jpeg" width="400" alt="coche">
 
----
+
 ## Código Python:
----
+
 
 ```cpp
 #PruebaBUENA - Modificado: Pelota AMARILLA y Plataforma VERDE
@@ -437,10 +452,10 @@ if esp32:
 cv2.destroyAllWindows()
 print("Sistema finalizado")
 ```
----
+
 
 ## Código Arduino:
----
+
 
 ```cpp
 #include <ESP32Servo.h>
@@ -695,25 +710,25 @@ void volverAlCentro() {
     }
   }
 ```
----
+
 
 ## Resultados
----
+
 
 <img src="../imgs/plataforma/tabla1.jpeg" width="400" alt="tabla">
 <img src="../imgs/plataforma/tabla2.jpeg" width="400" alt="tabla">
----
+
 
 La validación del sistema se centró en tres subsistemas clave. En cuanto a la Visión, la plataforma demostró ser capaz de calcular el error de posición $(x, y)$ de la pelota con la precisión necesaria para la tarea de equilibrio. La Conectividad se confirmó con el establecimiento y mantenimiento de una conexión Bluetooth estable entre la PC y el ESP32, presentando una latencia lo suficientemente baja para ejecutar las correcciones de la plataforma de manera rápida y efectiva. Finalmente, el Control de Posición fue exitoso, ya que el sistema logró mover la pelota desde cualquier posición inicial descentrada hacia el punto central y, más importante aún, cumplió el objetivo principal: mantener el objeto en equilibrio sobre la plataforma por un tiempo prolongado, contrarrestando eficientemente cualquier perturbación.
 
----
+
 <video width="400" controls>
   <source src="../imgs/plataforma/videotabla.mp4" type="video/mp4">
 </video>
----
+
 
 ## Conclusiones
----
+
 
 El proyecto de Plataforma de Balanceo de Bola demostró la aplicación efectiva de la ingeniería de control y la visión por computadora. Se logró integrar con éxito tres dominios: el procesamiento de alto nivel (Python/OpenCV), la comunicación inalámbrica (Bluetooth) y el control de actuadores de precisión (Servomotores/ESP32). Este sistema valida la capacidad de la arquitectura PC-Microcontrolador para resolver problemas de control dinámico que requieren un alto poder de cómputo para la detección de errores.
----
+
