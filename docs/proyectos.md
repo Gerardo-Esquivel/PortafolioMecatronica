@@ -15,7 +15,8 @@ El proyecto consistió en el diseño y construcción de un carro robot teledirig
 - Movimiento: La cinemática implementada fue la de Tracción Diferencial. Esta se logró enviando señales de PWM (Modulación por Ancho de Pulso) a los motores, permitiendo movimientos precisos como el avance, retroceso y giros controlados.
 
 
-(img) (img)
+<img src="../imgs/coche/coche1.jpeg" width="400" alt="coche">
+<img src="../imgs/coche/coche4.jpeg" width="400" alt="competencia">
 
 
 ## Materiales
@@ -29,7 +30,7 @@ El proyecto consistió en el diseño y construcción de un carro robot teledirig
 - MDF / IMPRESION 3D: Materiales utilizados para la estructura (chasis, cubiertas y pala frontal).
 
 
-(img)
+<img src="../imgs/coche/coche3.png" width="400" alt="spinner">
 
 
   ## Procedimiento - Elaboración
@@ -43,7 +44,8 @@ El desarrollo del proyecto se llevó a cabo mediante una aproximación colaborat
 - Mecanica: Esta área fue responsable del diseño físico (chasis de cuatro ruedas) y el ensamblaje, incluyendo la creación e integración de la pala frontal diseñada para la interacción eficiente con la pelota.
 
 
-(img) (img)
+<img src="../imgs/coche/coche2.png" width="400" alt="spinner">
+<img src="../imgs/coche/coche5.png" width="400" alt="spinner">
 
 
   ## Codigo de programación (Arduino)
@@ -94,3 +96,9 @@ void loop() {
         // 1. Ajuste de Velocidad con R2
         Speed = map(PS4.R2Value(), 0, 255, 210, 255);
 ```
+
+
+## Conclusion y Resultados
+
+
+El proyecto finalizó con éxito, resultando en un vehículo robótico completamente funcional que no solo cumplió con los requisitos de diseño, sino que también demostró un desempeño excepcional en el torneo de "Fútbol de Coches", donde el equipo resultó ganador. La verificación funcional confirmó la estabilidad del movimiento lineal y la alta maniobrabilidad lograda mediante el sistema de tracción diferencial y señales PWM precisas. Además, la conexión Bluetooth entre el control de PlayStation y el ESP32 mantuvo una latencia mínima, permitiendo un control en tiempo real que fue decisivo para el éxito ofensivo (anotando aproximadamente 4 goles). En conclusión, el proyecto fue un éxito técnico que validó la versatilidad del ESP32 como microcontrolador central para aplicaciones de control de alto rendimiento y tiempo real, combinando eficazmente la conectividad inalámbrica con el manejo de potencia.
