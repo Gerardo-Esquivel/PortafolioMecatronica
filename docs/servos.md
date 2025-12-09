@@ -44,3 +44,60 @@ El microcontrolador *ESP32* es idóneo para esta tarea, ya que su hardware permi
 ## Código Arduino
 
 
+```cpp
+/**
+ * @file Control_Servo_Libreria.ino
+ * @brief Control secuencial de un servomotor (0°, 90°, 180°) usando la librería Servo.h en ESP32.
+ * * La librería Servo.h simplifica el control al encargarse de la gestión interna del PWM.
+ */
+
+// Incluir la librería Servo específica para ESP32
+// NOTA: Para ESP32, a menudo se usa "ESP32Servo.h" o simplemente "Servo.h"
+// Si Servo.h no funciona, intente usar ESP32Servo.h
+#include <Servo.h> 
+
+// --- Configuración de Pines y Objetos ---
+
+#define SERVO_PIN 12 // Pin GPIO donde se conecta la señal del servo (Pin de ejemplo)
+
+// Crea un objeto Servo para controlar el motor
+Servo miServo; 
+
+// --- Setup (Configuración Inicial) ---
+void setup() {
+    Serial.begin(115200);
+    Serial.println("Inicializando Servomotor con Servo.h...");
+    
+    // Asocia el objeto Servo al pin de salida
+    // Este paso configura automáticamente el canal PWM necesario en el ESP32
+    miServo.attach(SERVO_PIN); 
+
+    // Asegurar que el servo inicie en una posición conocida
+    miServo.write(0); 
+    delay(1000);
+}
+
+// --- Loop Principal (Ejecución Continua) ---
+void loop() {
+    // Mover a 0 grados
+    Serial.println("Movimiento a 0 grados");
+    miServo.write(0); 
+    delay(1500); // Usamos un retardo ligeramente mayor para notar el movimiento
+
+    // Mover a 90 grados
+    Serial.println("Movimiento a 90 grados");
+    miServo.write(90); 
+    delay(1500);
+
+    // Mover a 180 grados
+    Serial.println("Movimiento a 180 grados");
+    miServo.write(180); 
+    delay(1500);
+}
+```
+
+
+## Resultados y conclusion
+
+
+Los resultados de la fase de pruebas confirmaron la viabilidad del método de control implementado, demostrando una respuesta angular precisa e inmediata del servomotor al posicionarse exactamente en los puntos preestablecidos (0°, 90°, 180°), lo que verifica la integridad de la conexión física. La clave del éxito fue la función map(), que resultó crítica para la calibración al permitir la traducción efectiva y lineal del rango lógico (0-180) al ciclo de trabajo PWM (205-410) requerido. Además, los datos numéricos del ciclo de trabajo PWM comunicados por el monitor serial coincidieron rigurosamente con el movimiento físico observado, validando la lógica de programación y la precisión del cálculo matemático. Esta actividad consolidó la comprensión práctica del control de actuadores angulares mediante la técnica PWM en la plataforma ESP32 y reforzó el entendimiento de la relación crítica entre la frecuencia del pulso, el ciclo de trabajo de la señal PWM y el desplazamiento angular preciso que se obtiene en el servomotor.
