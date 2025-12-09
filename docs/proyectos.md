@@ -1,7 +1,4 @@
-# Proyectos
-
-
-## Proyecto medio semestre: Coches Robots - Partido de fútbol
+# Proyecto medio semestre: Coches Robots - Partido de fútbol
 
 
 ## Objetivo 
