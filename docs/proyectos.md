@@ -15,6 +15,9 @@ El proyecto consistió en el diseño y construcción de un carro robot teledirig
 - Movimiento: La cinemática implementada fue la de Tracción Diferencial. Esta se logró enviando señales de PWM (Modulación por Ancho de Pulso) a los motores, permitiendo movimientos precisos como el avance, retroceso y giros controlados.
 
 
+(img) (img)
+
+
 ## Materiales
 
 
@@ -24,6 +27,9 @@ El proyecto consistió en el diseño y construcción de un carro robot teledirig
 - Pilas 3.7V / 2600 mAh: Suministro de energía al sistema.
 - MOTORES DC: Elementos actuadores que proporcionan la tracción.
 - MDF / IMPRESION 3D: Materiales utilizados para la estructura (chasis, cubiertas y pala frontal).
+
+
+(img)
 
 
   ## Procedimiento - Elaboración
@@ -37,7 +43,54 @@ El desarrollo del proyecto se llevó a cabo mediante una aproximación colaborat
 - Mecanica: Esta área fue responsable del diseño físico (chasis de cuatro ruedas) y el ensamblaje, incluyendo la creación e integración de la pala frontal diseñada para la interacción eficiente con la pelota.
 
 
+(img) (img)
+
+
   ## Codigo de programación (Arduino)
 
 
 Este firmware gestiona la conexión con el control PS4 y utiliza la lógica de tracción diferencial y ajuste de velocidad (con el gatillo R2) para el control del carro.
+
+
+```cpp
+/**
+ * @file Robot_Futbol_PS4_ESP32.ino
+ * @brief Código para controlar un carro robot de fútbol usando un ESP32 y un control PS4.
+ * Incluye funciones para avance, retroceso, giros y tracción diferencial mediante Joysticks.
+ */
+
+// Bibliotecas necesarias:
+#include <Arduino.h>
+#include <PS4Controller.h> 
+
+// --- Configuración de Pines y Variables ---
+int enA = 25; int enB = 14; // Pines de Enable (PWM)
+int IN1 = 26; int IN2 = 27; int IN3 = 32; int IN4 = 33; // Pines de Dirección
+#define R 0 // Canal LEDC para Motor Derecho
+#define L 1 // Canal LEDC para Motor Izquierdo
+int Speed = 210; // Velocidad base inicial
+int threshold = 10; // Umbral de sensibilidad para Joysticks
+
+// --- Declaración de Funciones de Movimiento ---
+void forward(); void backward(); void left(); void right(); void stop();
+void setMotor(int leftMotor, int rightMotor);
+
+// --- Setup (Configuración Inicial) ---
+void setup() {
+    Serial.begin(115200);
+    // *IMPORTANTE*: Reemplace la MAC Address con la de su control PS4.
+    PS4.begin("98:3b:8f:fc:0c:82"); 
+    Serial.println("Esperando control PS4...");
+    ledcAttachChannel(enA, 5000, 8, R);
+    ledcAttachChannel(enB, 5000, 8, L);
+    pinMode(IN1, OUTPUT); pinMode(IN2, OUTPUT);
+    pinMode(IN3, OUTPUT); pinMode(IN4, OUTPUT);
+    stop();
+}
+
+// --- Loop Principal (Ejecución Continua) ---
+void loop() {
+    if (PS4.isConnected()) {
+        // 1. Ajuste de Velocidad con R2
+        Speed = map(PS4.R2Value(), 0, 255, 210, 255);
+```
