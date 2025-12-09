@@ -530,14 +530,3 @@ sock.close() # Cierra la conexión Bluetooth
 
 
 El desarrollo de este portafolio subraya la capacidad esencial de OpenCV y Python para transformar una fuente de video cruda en datos procesables, abarcando desde la manipulación básica de píxeles (filtros y conversión de color BGR a HSV) hasta la implementación de complejos algoritmos de Visión por Computadora (CV) para el seguimiento de objetos (tracking). La práctica más significativa fue la exitosa integración de la CV con la comunicación inalámbrica (Bluetooth), demostrando cómo calcular el error direccional (ErrorX, ErrorY) de un objeto de interés y convertir esa desviación en comandos de control (IZQUIERDA, DERECHA). Este proceso establece un puente funcional entre el mundo digital (visión) y el mundo físico (robótica), siendo el principio rector de los sistemas de automatización y el control robótico basado en visión.
-
-
-## Imagenes 
-
-
-<img src="../imgs/camara/entornos.png" width="400" alt="coche">
-<img src="../imgs/camara/entornos.png" width="400" alt="coche">
-<img src="../imgs/camara/entornos.png" width="400" alt="coche">
-<img src="../imgs/camara/entornos.png" width="400" alt="coche">
-<img src="../imgs/camara/entornos.png" width="400" alt="coche">
-<img src="../imgs/camara/entornos.png" width="400" alt="coche">
