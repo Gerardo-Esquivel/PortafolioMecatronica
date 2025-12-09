@@ -41,6 +41,11 @@ El microcontrolador *ESP32* es idóneo para esta tarea, ya que su hardware permi
 3.  *Verificación:* Se cargó el programa a la ESP32 y se monitoreó el *movimiento físico del servo*. Los retardos de 1000 ms se usaron para confirmar cada posición.
 
 
+<video width="400" controls>
+  <source src="../imgs/servos/videoservo.mp4" type="video/mp4">
+</video>
+
+
 ## Código Arduino
 
 
@@ -95,6 +100,11 @@ void loop() {
     delay(1500);
 }
 ```
+
+
+<video width="400" controls>
+  <source src="../imgs/servos/videoservo2.mp4" type="video/mp4">
+</video>
 
 
 ## Resultados y conclusion
