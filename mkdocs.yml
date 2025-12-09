@@ -47,5 +47,7 @@ nav:
     - Control de LED con ESP32: ledesp32.md
     - Control de Servos: servos.md
     - Programa con cámara: camara.md
-  - Proyectos (Coche y Plataforma): proyectos.md
+  - Proyectos (Coche y Plataforma):
+    - Proyecto coche: proyectos.md
+    - Proyecto plataforma: plataforma.md
   - Equipo de trabajo: presentacion.md 
