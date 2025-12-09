@@ -1,8 +1,8 @@
-# Proyecto Final: Plataforma - Balance de Pelota
+# Proyecto Final: Plataforma - Balance de Pelota.
 ---
 Este proyecto se centró en el diseño e implementación de un sistema de control de posición en tiempo real. El objetivo fue construir una plataforma dinámica capaz de mantener una pelota centrada sobre su superficie, contrarrestando activamente la fuerza de gravedad mediante la inclinación de la base. El sistema emplea una arquitectura avanzada que combina visión por computadora (Python) para la detección de errores y el microcontrolador ESP32 para la ejecución precisa del movimiento a través de servomotores.
 ---
-## Marco Teórico
+## Marco Teórico.
 ---
 El proyecto se sustenta en tres pilares tecnológicos: la visión por computadora para la detección de errores, el protocolo de comunicación inalámbrica y la teoría de control.
 ---
@@ -22,7 +22,7 @@ Los servomotores fueron elegidos como actuadores por su capacidad de posicionami
 - Función: La ESP32 recibe el error y lo traduce en ángulos de inclinación , para los dos servomotores, que controlan los ejes X y Y de la plataforma.
 - Control (PID): La relación entre el error de posición y los ángulos de los servomotores generalmente se maneja mediante un algoritmo de control Proporcional-Integral-Derivativo (PID), aunque la implementación básica puede usar solo control Proporcional. El objetivo es que, si la pelota se mueve en la dirección X positiva, la plataforma se incline en la dirección X negativa para corregir el movimiento.
 ---
-## Materiales
+## Materiales.
 ---
 - Microcontrolador ESP32 DevKit V
 - Computadora Host
@@ -32,9 +32,9 @@ Los servomotores fueron elegidos como actuadores por su capacidad de posicionami
 - Módulo de Bluetooth Integrado (en ESP32)
 - Software Python y Arduino IDE (para el código del ESP32).
 ---
-  ## Procedimiento - Elaboracion
+  ## Procedimiento - Elaboracion.
 ---
-  ## Conexión y montaje
+  ## Conexión y montaje.
 ---
 La plataforma mecánica se construyó sobre dos servomotores, permitiendo el movimiento independiente en dos ejes de inclinación, y su cableado se realizó directamente a pines PWM digitales específicos del ESP32 para el control de ángulo. El flujo de datos inicia con la cámara capturando la imagen, la cual es procesada por Python para calcular el error de posición; Python luego transmite los valores $x, y$ vía Bluetooth a la ESP32, donde el código de Arduino los recibe e inmediatamente los utiliza para calcular y establecer el ángulo de corrección de los servomotores.
 ---
