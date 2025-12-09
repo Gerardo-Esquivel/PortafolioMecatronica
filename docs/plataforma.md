@@ -53,7 +53,14 @@ Los servomotores fueron elegidos como actuadores por su capacidad de posicionami
 La plataforma mecánica se construyó sobre dos servomotores, permitiendo el movimiento independiente en dos ejes de inclinación, y su cableado se realizó directamente a pines PWM digitales específicos del ESP32 para el control de ángulo. El flujo de datos inicia con la cámara capturando la imagen, la cual es procesada por Python para calcular el error de posición; Python luego transmite los valores $x, y$ vía Bluetooth a la ESP32, donde el código de Arduino los recibe e inmediatamente los utiliza para calcular y establecer el ángulo de corrección de los servomotores.
 
 
+<img src="../imgs/plataforma/piezas.jpg" width="400" alt="coche">
+<img src="../imgs/plataforma/articulaciones.jpg" width="400" alt="arti">
+<img src="../imgs/plataforma/elaboracion.jpg" width="400" alt="coche">
+
 ## Códigos:
+
+
+<img src="../imgs/plataforma/codigo1.jpeg" width="400" alt="coche">
 
 
 ## Código Python:
@@ -707,10 +714,16 @@ void volverAlCentro() {
 ## Resultados
 
 
+<img src="../imgs/plataforma/tabla1.jpeg" width="400" alt="tabla">
+<img src="../imgs/plataforma/tabla2.jpeg" width="400" alt="tabla">
+
+
 La validación del sistema se centró en tres subsistemas clave. En cuanto a la Visión, la plataforma demostró ser capaz de calcular el error de posición $(x, y)$ de la pelota con la precisión necesaria para la tarea de equilibrio. La Conectividad se confirmó con el establecimiento y mantenimiento de una conexión Bluetooth estable entre la PC y el ESP32, presentando una latencia lo suficientemente baja para ejecutar las correcciones de la plataforma de manera rápida y efectiva. Finalmente, el Control de Posición fue exitoso, ya que el sistema logró mover la pelota desde cualquier posición inicial descentrada hacia el punto central y, más importante aún, cumplió el objetivo principal: mantener el objeto en equilibrio sobre la plataforma por un tiempo prolongado, contrarrestando eficientemente cualquier perturbación.
 
 
-(video)
+<video width="400" controls>
+  <source src="../imgs/plataforma/videotabla.mp4" type="video/mp4">
+</video>
 
 
 ## Conclusiones
